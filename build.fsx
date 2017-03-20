@@ -2,8 +2,6 @@
 #r "packages/build/FAKE/tools/FakeLib.dll"
 open Fake
 
-RestorePackages()
-
 // Properties
 let buildDir = "./artifacts"
 let solutionFile = "Quincy.sln"
