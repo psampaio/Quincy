@@ -1,0 +1,7 @@
+
+
+GROUP Build
+CONTENT: NONE
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FAKE (4.56)
