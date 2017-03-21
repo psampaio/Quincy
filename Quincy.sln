@@ -9,13 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9B87256B-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3101A282-3367-4DBA-8A5E-F5C3BB9C05DE}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.fsx = build.fsx
+		fake.cmd = fake.cmd
 		paket.dependencies = paket.dependencies
 		paket.lock = paket.lock
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quincy", "src\Quincy\Quincy.csproj", "{0D39B838-55E0-4E92-990F-EDABCED6DBB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quincy", "src\Quincy\Quincy.csproj", "{0D39B838-55E0-4E92-990F-EDABCED6DBB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quincy.Tests", "test\Quincy.Tests\Quincy.Tests.csproj", "{1937E33B-50FD-4E77-A9BC-7C61D01AFEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quincy.Tests", "test\Quincy.Tests\Quincy.Tests.csproj", "{1937E33B-50FD-4E77-A9BC-7C61D01AFEAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
