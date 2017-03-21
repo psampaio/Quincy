@@ -2,11 +2,14 @@
 #r "packages/build/FAKE/tools/FakeLib.dll"
 open Fake
 open Fake.Paket
+open Fake.Testing
 
 Restore
 
 // Properties
-let buildDir = "./artifacts"
+let artifactsDir = "./artifacts/"
+let buildDir = "./artifacts/build/"
+let testDir = "./artifacts/tests/"
 let solutionFile = "Quincy.sln"
 
 MSBuildDefaults <-{
@@ -16,18 +19,35 @@ MSBuildDefaults <-{
 
 // Targets
 Target "Clean" (fun _ ->
-    CleanDirs [buildDir]
+    CleanDirs [artifactsDir]
 )
 
 Target "BuildApp" (fun _ ->
-    !! solutionFile
-     |> MSBuildRelease buildDir "Build"
-     |> Log "AppBuild-Output: "
+    !! "src/**/*.csproj"
+      |> MSBuildRelease buildDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTests" (fun _ ->
+    !! "test/**/*.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "TestBuild-Output: "
+)
+
+Target "RunTests" (fun _ ->
+    !! (testDir @@ "*.Tests.dll")
+      |> xUnit2 (fun p ->
+        { p with
+            HtmlOutputPath = Some (testDir @@ "html");
+            ToolPath = @"packages/tests/xunit.runner.console/tools/xunit.console.exe"
+          })
 )
 
 // Dependencies
 "Clean"
   ==> "BuildApp"
+  ==> "BuildTests"
+  ==> "RunTests"
 
 // start build
-RunTargetOrDefault "BuildApp"
+RunTargetOrDefault "RunTests"
