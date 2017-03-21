@@ -4,7 +4,6 @@ pull_requests:
 branches:
   only:
   - master
-image: Visual Studio 2017
 build_script:
 - cmd: fake.cmd
 test: off
