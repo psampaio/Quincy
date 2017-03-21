@@ -1,9 +1,8 @@
 // include Fake lib
 #r "packages/build/FAKE/tools/FakeLib.dll"
 open Fake
-open Fake.Paket
 
-Restore
+RestorePackages()
 
 // Properties
 let buildDir = "./artifacts"
