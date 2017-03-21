@@ -38,7 +38,7 @@ Target "RunTests" (fun _ ->
     !! (testDir @@ "*.Tests.dll")
       |> xUnit2 (fun p ->
         { p with
-            HtmlOutputPath = Some (testDir @@ "html");
+            HtmlOutputPath = Some (testDir @@ "xunit.html");
             ToolPath = @"packages/tests/xunit.runner.console/tools/xunit.console.exe"
           })
 )
