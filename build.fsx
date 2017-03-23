@@ -21,6 +21,10 @@ Target "Clean" (fun _ ->
     CleanDirs [artifactsDir]
 )
 
+Target "UpdateAssemblyInfo" (fun _ ->
+    if environVar "APPVEYOR" = "True" then Shell.Exec("gitversion","/l console /output buildserver /updateassemblyinfo" ) |> ignore
+)
+
 Target "BuildApp" (fun _ ->
     !! "src/**/*.csproj"
       |> MSBuildRelease buildDir "Build"
@@ -51,6 +55,7 @@ Target "Package" (fun _ ->
 
 // Dependencies
 "Clean"
+  ==> "UpdateAssemblyInfo"
   ==> "BuildApp"
   ==> "BuildTests"
   ==> "RunTests"
