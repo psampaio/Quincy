@@ -8,13 +8,12 @@ Restore
 
 // Properties
 let artifactsDir = "./artifacts/"
-let buildDir = "./artifacts/build/"
-let testDir = "./artifacts/tests/"
-let solutionFile = "Quincy.sln"
+let buildDir = artifactsDir @@ "build/"
+let testDir = artifactsDir @@ "tests/"
 
 MSBuildDefaults <-{
     MSBuildDefaults with
-        Verbosity = Some (Quiet)
+        Verbosity = Some (Minimal)
 }
 
 // Targets
@@ -25,13 +24,13 @@ Target "Clean" (fun _ ->
 Target "BuildApp" (fun _ ->
     !! "src/**/*.csproj"
       |> MSBuildRelease buildDir "Build"
-      |> Log "AppBuild-Output: "
+      |> ignore
 )
 
 Target "BuildTests" (fun _ ->
     !! "test/**/*.csproj"
       |> MSBuildRelease testDir "Build"
-      |> Log "TestBuild-Output: "
+      |> ignore
 )
 
 Target "RunTests" (fun _ ->
@@ -43,11 +42,19 @@ Target "RunTests" (fun _ ->
           })
 )
 
+Target "Package" (fun _ ->
+    Pack (fun p ->
+      { p with
+          OutputPath = artifactsDir
+      })
+)
+
 // Dependencies
 "Clean"
   ==> "BuildApp"
   ==> "BuildTests"
   ==> "RunTests"
+  ==> "Package"
 
 // start build
-RunTargetOrDefault "RunTests"
+RunTargetOrDefault "Package"

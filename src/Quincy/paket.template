@@ -1,0 +1,8 @@
+type file
+licenseUrl http://opensource.org/licenses/MIT
+id Quincy
+version 0.1.0
+authors Pedro Sampaio
+description Quincy
+files
+	../../artifacts/build/Quincy.dll => lib
