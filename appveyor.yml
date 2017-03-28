@@ -8,6 +8,9 @@ image: Visual Studio 2017
 build_script:
 - cmd: fake.cmd
 test: off
+artifacts:  
+- path: .\artifacts\*.nupkg
+  name: NuGet
 deploy:
 - provider: NuGet
   server: https://www.myget.org/F/psampaio-ci/api/v2/package
