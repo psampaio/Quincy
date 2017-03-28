@@ -9,7 +9,7 @@ build_script:
 - cmd: fake.cmd
 test: off
 artifacts:  
-- path: .\artifacts\*.nupkg
+- path: .\artifacts\**\*.nupkg
   name: NuGet
 deploy:
 - provider: NuGet
