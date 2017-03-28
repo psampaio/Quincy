@@ -22,7 +22,7 @@ Target "Clean" (fun _ ->
 )
 
 Target "UpdateAssemblyInfo" (fun _ ->
-    if environVar "APPVEYOR" = "True" then Shell.Exec("c:\\ProgramData\\chocolatey\\bin\\gfv.exe","/l console /output buildserver /updateassemblyinfo" ) |> ignore
+    Shell.Exec("c:\\ProgramData\\chocolatey\\bin\\gfv.exe","/l console /output buildserver /updateassemblyinfo" ) |> ignore
 )
 
 Target "BuildApp" (fun _ ->
