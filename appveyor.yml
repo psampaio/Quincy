@@ -15,7 +15,7 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/psampaio-ci/api/v2/package
   api_key:
-    secure: LsHsS1xhzeboHbZrblWfPMEYt7iw/1vGhiU2fzLoKYFRnfzxJ53TFmQ8mTujUMpB9UXfCd5YUZJByBMliwWS0gkcucP5+hEvswo8r00u4zY=
+    secure: EvLaBeK1OVNnO6/7ZOm6nAUh8kMETA8n0UGhx+rWmCz7LowAqNBquXL+Q3xoBGVB
   skip_symbols: true
   on:
     branch: master
