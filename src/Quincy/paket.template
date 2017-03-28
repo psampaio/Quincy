@@ -1,0 +1,4 @@
+type project
+licenseUrl http://opensource.org/licenses/MIT
+authors Pedro Sampaio
+description The description of the package

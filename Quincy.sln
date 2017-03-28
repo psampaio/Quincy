@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{82DB95F7-768D-4B99-8423-F0A586AFCA5D}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{071C31B6-8A5A-42DD-B9C9-05C2D9B72536}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9B87256B-56F9-43A1-8F22-CAC0C835FBBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3101A282-3367-4DBA-8A5E-F5C3BB9C05DE}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.fsx = build.fsx
+		fake.cmd = fake.cmd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quincy", "src\Quincy\Quincy.csproj", "{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quincy.Tests", "test\Quincy.Tests\Quincy.Tests.csproj", "{55633073-87AA-4D48-BE1D-A30C9A12665D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55633073-87AA-4D48-BE1D-A30C9A12665D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55633073-87AA-4D48-BE1D-A30C9A12665D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55633073-87AA-4D48-BE1D-A30C9A12665D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55633073-87AA-4D48-BE1D-A30C9A12665D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990} = {071C31B6-8A5A-42DD-B9C9-05C2D9B72536}
+		{55633073-87AA-4D48-BE1D-A30C9A12665D} = {9B87256B-56F9-43A1-8F22-CAC0C835FBBB}
+	EndGlobalSection
+EndGlobal

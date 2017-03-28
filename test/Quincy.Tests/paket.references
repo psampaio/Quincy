@@ -1,0 +1,5 @@
+StructureMap
+xunit
+NSubstitute
+Caliburn.Micro
+FluentAssertions

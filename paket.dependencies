@@ -1,0 +1,16 @@
+source https://api.nuget.org/v3/index.json
+nuget Caliburn.Micro
+nuget xunit
+nuget StructureMap
+nuget NSubstitute
+nuget FluentAssertions
+
+group Build
+content: none
+source https://api.nuget.org/v3/index.json
+nuget FAKE prerelease
+
+group Tests
+content: none
+source https://api.nuget.org/v3/index.json
+nuget xunit.runner.console
