@@ -8,4 +8,11 @@ image: Visual Studio 2017
 build_script:
 - cmd: fake.cmd
 test: off
-deploy: off
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/psampaio-ci/api/v2/package
+  api_key:
+    secure: LsHsS1xhzeboHbZrblWfPMEYt7iw/1vGhiU2fzLoKYFRnfzxJ53TFmQ8mTujUMpB9UXfCd5YUZJByBMliwWS0gkcucP5+hEvswo8r00u4zY=
+  skip_symbols: true
+  on:
+    branch: master
