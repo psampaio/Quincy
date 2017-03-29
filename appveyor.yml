@@ -5,6 +5,8 @@ branches:
   only:
   - master
 image: Visual Studio 2017
+init:
+- cmd: choco install gitversion.portable -pre -version 4.0.0-beta0011
 build_script:
 - cmd: fake.cmd
 test: off
