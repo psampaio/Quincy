@@ -4,6 +4,8 @@ nuget xunit
 nuget StructureMap
 nuget NSubstitute
 nuget FluentAssertions
+nuget MaterialDesignThemes
+nuget Reactiveui
 
 group Build
 content: none
