@@ -34,6 +34,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,7 @@
     <Compile Include="IDialogManager.cs" />
     <Compile Include="MediatorRegistry.cs" />
     <Compile Include="Progress\IProgressReport.cs" />
+    <Compile Include="Progress\ProgressBarExtensions.cs" />
     <Compile Include="Progress\ProgressReporter.cs" />
     <Compile Include="Progress\ProgressState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
