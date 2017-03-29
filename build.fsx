@@ -48,6 +48,7 @@ Target "RunTests" (fun _ ->
 
 Target "Package" (fun _ ->
     Shell.Exec("./.paket/paket.exe", "pack output ./artifacts -v") |> ignore
+    Shell.Exec("ls", "-als ./artifacts") |> ignore
 //    Pack (fun p ->
 //      { p with
 //          OutputPath = artifactsDir
