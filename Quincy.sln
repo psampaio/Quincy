@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		appveyor.yml = appveyor.yml
 		build.fsx = build.fsx
 		fake.cmd = fake.cmd
+		GitVersion.yml = GitVersion.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quincy", "src\Quincy\Quincy.csproj", "{B2E14FE7-E0FC-4FE8-B51A-C0E4E9801990}"

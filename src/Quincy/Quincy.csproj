@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaliburnMicroDebugLogger.cs" />
+    <Compile Include="CaliburnRegistry.cs" />
+    <Compile Include="EventAggregatorHandlerRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMapBootstrapper.cs" />
   </ItemGroup>
