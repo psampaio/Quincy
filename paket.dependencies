@@ -6,6 +6,7 @@ nuget NSubstitute
 nuget FluentAssertions
 nuget MaterialDesignThemes
 nuget Reactiveui
+nuget MediatR
 
 group Build
 content: none
