@@ -25,7 +25,7 @@ namespace Quincy
             view.DataContext = rootModel;
 
             conductor.ActivateItem(rootModel);
-            var returnValue = await DialogHost.Show(view, dialogIdentifier, OnDialogClosing);
+            var returnValue = await DialogHost.Show(view, OnDialogClosing);
 
             if (returnValue == null)
                 return default(TReturn);
