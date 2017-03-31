@@ -5,7 +5,7 @@ namespace Quincy
 {
     public interface IDialogManager
     {
-        Task<TReturn> ShowDialog<TViewModel, TReturn>(TViewModel rootModel, string dialogIdentifier)
+        Task<TReturn> ShowDialog<TViewModel, TReturn>(TViewModel rootModel)
             where TViewModel : class, IScreen;
     }
 }

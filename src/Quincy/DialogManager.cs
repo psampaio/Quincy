@@ -16,7 +16,7 @@ namespace Quincy
             ((IActivate)conductor).Activate();
         }
 
-        public async Task<TReturn> ShowDialog<TViewModel, TReturn>(TViewModel rootModel, string dialogIdentifier)
+        public async Task<TReturn> ShowDialog<TViewModel, TReturn>(TViewModel rootModel)
             where TViewModel : class, IScreen
         {
             var viewType = ViewLocator.LocateTypeForModelType(typeof(TViewModel), null, null);
