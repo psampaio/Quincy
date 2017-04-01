@@ -48,6 +48,16 @@
     <Compile Include="CaliburnRegistry.cs" />
     <Compile Include="DialogManager.cs" />
     <Compile Include="EventAggregatorHandlerRegistration.cs" />
+    <Compile Include="Events\StoreStateProvider.cs" />
+    <Compile Include="Events\EventHandlerWrapper.cs" />
+    <Compile Include="Events\EventRegistry.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\IEventHandler.cs" />
+    <Compile Include="Events\IStore.cs" />
+    <Compile Include="Events\IStoreState.cs" />
+    <Compile Include="Events\IStoreStateProvider.cs" />
+    <Compile Include="Events\Store.cs" />
+    <Compile Include="Events\StoreState.cs" />
     <Compile Include="IDialogManager.cs" />
     <Compile Include="MediatorRegistry.cs" />
     <Compile Include="Progress\IProgressReport.cs" />
