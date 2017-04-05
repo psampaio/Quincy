@@ -1,20 +1,22 @@
-﻿using Caliburn.Micro;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using Caliburn.Micro;
 using NSubstitute;
 using StructureMap;
 using Xunit;
 
 namespace Quincy.Tests
 {
-    public class StructureMapBootstrapperTests
+    public class BootstrapperTests
     {
-        private readonly IContainer container;
-
-        public StructureMapBootstrapperTests()
+        public BootstrapperTests()
         {
             container = Substitute.For<IContainer>();
             var testBootstrapper = new TestBootstrapper(container);
             testBootstrapper.Initialize();
         }
+
+        private readonly IContainer container;
 
         [Fact]
         public void BuildUpServices()
@@ -25,10 +27,10 @@ namespace Quincy.Tests
         }
 
         [Fact]
-        public void GetASingleServiceWithoutKey()
+        public void GetAllServices()
         {
-            IoC.Get<IFoo>();
-            container.Received(1).GetInstance(Arg.Is(typeof(IFoo)));
+            IoC.GetAll<IFoo>();
+            container.Received(1).GetAllInstances(Arg.Is(typeof(IFoo)));
         }
 
         [Fact]
@@ -40,10 +42,10 @@ namespace Quincy.Tests
         }
 
         [Fact]
-        public void GetAllServices()
+        public void GetASingleServiceWithoutKey()
         {
-            IoC.GetAll<IFoo>();
-            container.Received(1).GetAllInstances(Arg.Is(typeof(IFoo)));
+            IoC.Get<IFoo>();
+            container.Received(1).GetInstance(Arg.Is(typeof(IFoo)));
         }
     }
 
@@ -53,10 +55,9 @@ namespace Quincy.Tests
 
     public class ConcreteFoo
     {
-        
     }
 
-    public class TestBootstrapper : StructureMapBootstrapper
+    public class TestBootstrapper : Bootstrapper
     {
         private readonly IContainer containerToConfigure;
 
@@ -70,6 +71,13 @@ namespace Quincy.Tests
         {
             return containerToConfigure;
         }
-    }
 
+        protected override IEnumerable<Assembly> SelectAssemblies()
+        {
+            return new[]
+            {
+                GetType().Assembly
+            };
+        }
+    }
 }
