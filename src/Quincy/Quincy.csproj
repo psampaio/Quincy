@@ -46,11 +46,6 @@
   <ItemGroup>
     <Compile Include="CaliburnMicroDebugLogger.cs" />
     <Compile Include="CaliburnRegistry.cs" />
-    <Compile Include="Commands\CommandManager.cs" />
-    <Compile Include="Commands\CommandRegistry.cs" />
-    <Compile Include="Commands\GenerateCommandConvention.cs" />
-    <Compile Include="Commands\ICommandManager.cs" />
-    <Compile Include="Commands\IGenerateCommand.cs" />
     <Compile Include="DialogManager.cs" />
     <Compile Include="EventAggregatorHandlerRegistration.cs" />
     <Compile Include="Events\StoreStateProvider.cs" />
