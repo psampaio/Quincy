@@ -46,11 +46,6 @@
   <ItemGroup>
     <Compile Include="CaliburnMicroDebugLogger.cs" />
     <Compile Include="CaliburnRegistry.cs" />
-    <Compile Include="Commands\CommandManager.cs" />
-    <Compile Include="Commands\CommandRegistry.cs" />
-    <Compile Include="Commands\GenerateCommandConvention.cs" />
-    <Compile Include="Commands\ICommandManager.cs" />
-    <Compile Include="Commands\IGenerateCommand.cs" />
     <Compile Include="DialogManager.cs" />
     <Compile Include="EventAggregatorHandlerRegistration.cs" />
     <Compile Include="Events\StoreStateProvider.cs" />
@@ -71,6 +66,9 @@
     <Compile Include="Progress\ProgressState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="ReactiveCaliburn\ReactivePropertyChangedBase.cs" />
+    <Compile Include="ReactiveCaliburn\ReactiveScreen.cs" />
+    <Compile Include="ReactiveCaliburn\ReactiveViewAware.cs" />
     <Compile Include="UxRegistry.cs" />
   </ItemGroup>
   <ItemGroup>
