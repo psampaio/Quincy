@@ -1,12 +1,12 @@
 source https://api.nuget.org/v3/index.json
-nuget Caliburn.Micro
+nuget Caliburn.Micro ~> 3
 nuget xunit
-nuget StructureMap
+nuget StructureMap ~> 4
 nuget NSubstitute
 nuget FluentAssertions
-nuget MaterialDesignThemes
-nuget Reactiveui
-nuget MediatR
+nuget MaterialDesignThemes ~> 2
+nuget Reactiveui ~> 7
+nuget MediatR ~> 3
 
 group Build
 content: none
