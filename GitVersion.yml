@@ -1,4 +1,5 @@
 mode: Mainline
+assembly-informational-format: '{NugetVersion}'
 branches: {}
 ignore:
   sha: []
